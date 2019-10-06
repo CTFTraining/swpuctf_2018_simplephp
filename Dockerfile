@@ -10,4 +10,4 @@ RUN rm /var/www/html/index.html
 
 EXPOSE 80
 
-CMD service apache2 start && tail -f /dev/null
+CMD sed -i "s/flag{this_is_flag}/$FLAG/" /var/www/html/f1ag.php && service apache2 start && tail -f /dev/null
